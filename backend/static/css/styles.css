@@ -1,0 +1,93 @@
+/* Custom Styles for Smart Maps AI */
+
+/* Enhanced shadows and glassmorphism */
+.shadow-architect {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+}
+
+.glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Custom animations */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+.float-animation {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Button enhancements */
+/* Olive Green and Lemon Yellow Theme */
+:root {
+    --olive-50: #f0f9f0;
+    --olive-500: #556b2f;
+    --olive-600: #4a5f23;
+    --olive-700: #3d4a1e;
+    --lemon-400: #fcd34d;
+    --lemon-500: #facc15;
+    --lemon-600: #eab308;
+}
+
+.btn-olive-lemon {
+    background: linear-gradient(135deg, var(--olive-600), var(--olive-700));
+    border: 2px solid var(--lemon-400);
+}
+
+.btn-olive-lemon:hover {
+    background: linear-gradient(135deg, var(--olive-700), var(--olive-600));
+    box-shadow: 0 10px 25px rgba(85, 107, 47, 0.4);
+}
+
+.btn-secondary {
+    @apply border-2 border-primary text-primary font-bold py-3 px-8 rounded-xl hover:bg-primary hover:text-white transition-all duration-300;
+}
+
+/* Feature cards hover */
+.feature-card {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.feature-card:hover {
+    transform: translateY(-12px) scale(1.02);
+}
+
+/* Scroll indicator */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #1e40af, #9333ea);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #1e3a8a, #7c3aed);
+}
+
+/* Responsive enhancements */
+@media (max-width: 640px) {
+    .hero-title {
+        font-size: 2.5rem !important;
+    }
+}
+
+/* Pulse animation for connection status */
+@keyframes pulse-green {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+.animate-pulse-green {
+    animation: pulse-green 2s infinite;
+}
+
